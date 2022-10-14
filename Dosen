@@ -1,0 +1,58 @@
+package praktikum4;
+public class main {
+    public static void main(String[] args) {
+        System.out.println("Memasukkan Identitas Dosen 1 : TALHAH");
+        Dosen dosen1 = new Dosen("TALHAH");
+ 
+        System.out.println("Memasukkan Identitas Dosen 2 : ALFIAN, NIP. 21091");
+        Dosen dosen2 = new Dosen("PADMA", 21091);
+ 
+        System.out.println("Memasukkan Identitas Dosen 3 : PADMA, NIP. 054, umur 35");
+        Dosen dosen3 = new Dosen("PADMA", 054, 35);
+
+        System.out.println();
+        dosen1.info();
+        System.out.println();
+        dosen2.info();
+        System.out.println();
+        dosen3.info();
+    }    
+}
+package Praktikum4;
+
+public class Dosen extends Org {
+    private int nip;
+    public Dosen(String nama){
+        this.nama=nama;
+    }
+    public Dosen(String nama, int nip){
+        this.nama=nama;
+        this.nip=nip;
+    }
+    public Dosen(String nama, int nip, int umur){
+        this.nama=nama;
+        this.umur=umur;
+        this.nip=nip;
+    }
+
+    public void info(){
+        System.out.println("Nama : " + nama);
+        System.out.println ("NIP : " + nip);
+        System.out.println("Umur : " + umur);
+    }
+}
+
+package praktikum4;
+
+public class Org {
+    protected String nama;
+    protected int umur;
+    
+    public void Orang (String nama){
+        this.nama=nama;
+    }
+    public void Orang (String nama, int umur){
+        this.nama=nama;
+        this.umur=umur;
+    }
+}
